@@ -1,0 +1,26 @@
+#wrapper{
+	background-color: lightblue;
+	height: auto;
+	margin-left: 5em;
+	margin-right: 5em;
+	padding: 1em;
+}
+
+#image-background-travel{
+	/* image de background */
+	background-color: #f0f2b8;
+	height: 20em;
+}
+
+/* contient location & activity */
+.location-activity {
+	display: flex;
+	flex-direction: row;
+	text-align: center;
+	background-color: lightgreen;
+}
+
+.seasons {
+	text-align: center;
+	background-color: #ea98c9;
+}
