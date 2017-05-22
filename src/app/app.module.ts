@@ -4,9 +4,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule }   from '@angular/forms';
 
 // app
-import { AppComponent }  from './app.component';
-import { DashboardComponent } from './dashboard.component';
-import { TravelComponent } from './travel.component';
+import { AppComponent }  from './ihm/app.component';
+import { DashboardComponent } from './ihm/dashboard.component';
+import { TravelComponent } from './ihm/travel.component';
 
 @NgModule({
   imports: [ BrowserModule, FormsModule, RouterModule.forRoot([
