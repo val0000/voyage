@@ -43,3 +43,43 @@
 body {
     background-color: #EDE9DA;
 }
+
+
+#video_tue {
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+    overflow: hidden;
+    height: 12em;
+    margin-bottom: 0!important;
+
+}
+
+#video_tue div{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 1.5em;
+    margin-bottom: 0;
+
+}
+
+#video_tue video{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    
+}
+
+
+#video_tue {
+    width: 200%;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    text-align: center;
+    transform: translate(-25%);
+}
+
+.footer-noir{
+    padding-top: 25px;
+}
