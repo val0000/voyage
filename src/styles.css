@@ -35,3 +35,11 @@
     border-right: 2px dashed #6b654b;
     z-index: 0;
 }
+
+.modification-bouton{
+    margin: auto;
+}
+
+body {
+    background-color: #EDE9DA;
+}
