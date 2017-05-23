@@ -1,0 +1,14 @@
+
+.container{
+	 width: 90%;
+}
+
+.quote-box{
+   /*  overflow: hidden; */
+    margin: 10px;
+    padding: 10px;
+    border-radius: 17px;
+    background-color:#84d1c8;
+    color:white;
+    box-shadow: 2px 2px 2px 2px #E0E0E0;  
+}
