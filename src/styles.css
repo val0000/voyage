@@ -1,15 +1,37 @@
-/*#menu-fix {
-display: block;
-position: static;
-top: 0;
-z-index: 10;
-    
-}*/
-
 .carousel {
     bottom: 8px;
 }
 
 .carousel-item > .carousel-caption {
     bottom: 35%;
+}
+#fond-concept {
+    background-color: #EDE9DA;
+}
+
+.icone-concept {
+    display: block;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: #6b654b;
+    color: white;
+    font-size: 110px;
+    padding: 15px;
+    width: 140px;
+    border-radius: 120px;
+    z-index: 10;
+}
+
+.marge-concept{
+    margin-top: 50px;
+}
+
+.pointiller {
+    position: absolute;
+    top: 16%;
+    height: 60%;
+    width: 50%;
+    border-right: 2px dashed #6b654b;
+    z-index: 0;
 }
