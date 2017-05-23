@@ -103,7 +103,7 @@
 	flex-direction: row;
 	text-align: center;
 	background-color: ;
-	margin-top: 2em;
+	margin-top: 5em;
 }
  
 .location {
@@ -116,3 +116,6 @@
 	background-color: ;
 }
 
+.travel {
+		padding-top: 5em;
+}
