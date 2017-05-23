@@ -10,7 +10,8 @@
 	background-image: url(image/background-travel2.jpg);
 	/* height: 20em; */
 	background-repeat: repeat-x;
-    height: 35em;
+	background-position: center;
+    height: auto;
     width: 100%;
 }
 
