@@ -5,3 +5,11 @@ top: 0;
 z-index: 10;
     
 }
+
+.carousel {
+    bottom: 8px;
+}
+
+.carousel-item > .carousel-caption {
+    bottom: 35%;
+}
