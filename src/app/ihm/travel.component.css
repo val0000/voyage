@@ -12,15 +12,94 @@
 	height: 20em;
 }
 
+/* TRAVEL */
+
+.row {
+    float: left;
+    width: 100%;
+}
+.hoverbtn {
+    display: inline-block;
+    font-size: 18px;
+    font-weight:400;
+    line-height: 90px;
+    cursor: pointer;
+    /*  margin: 10px;*/
+	width: 20%;
+    font-family:"Roboto";
+    height: 90px;
+    text-align: center;
+    position: relative;
+    text-decoration: none;
+    z-index: 1;
+    color: #fff;
+}
+
+.hoverbtn:after {
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content:'';
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+.hoverbtn:before {
+    speak: none;
+    font-size: 48px;
+    line-height: 90px;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    display: block;
+    -webkit-font-smoothing: antialiased;
+}
+/* Effect 2 */
+ .hoverbtn.effect-2 {
+    color: #eea303;
+    box-shadow: 0 0 0 3px #fff;
+    -webkit-transition: color 0.3s;
+    -moz-transition: color 0.3s;
+    transition: color 0.3s;
+}
+.hoverbtn.effect-2:after {
+    top: -2px;
+    left: -2px;
+    padding: 2px;
+    z-index: -1;
+    background: #fff;
+    -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
+    -moz-transition: -moz-transform 0.2s, opacity 0.2s;
+    transition: transform 0.2s, opacity 0.2s;
+}
+/* Effect 2b */
+ .hoverbtn.effect-2.sub-b:hover:after {
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    opacity: 0;
+    -webkit-transition: -webkit-transform 0.4s, opacity 0.2s;
+    -moz-transition: -moz-transform 0.4s, opacity 0.2s;
+    transition: transform 0.4s, opacity 0.2s;
+}
+.hoverbtn.effect-2.sub-b:hover, .hoverbtn.effect-2.sub-b:hover i {
+    color: #fff;
+}
 /* contient location & activity */
 .location-activity {
 	display: flex;
 	flex-direction: row;
 	text-align: center;
-	background-color: lightgreen;
+	background-color: ;
 }
+
+
 
 .seasons {
 	text-align: center;
-	background-color: #ea98c9;
+	background-color: ;
 }
+
