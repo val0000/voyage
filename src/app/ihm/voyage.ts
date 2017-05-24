@@ -1,9 +1,24 @@
-import { Component } from '@angular/core';
+export enum Saison{
+    PRINTEMPS,
+    ETE,
+    AUTOMNE,
+    HIVER
+}
 
-@Component({
-    moduleId: module.id,
-    selector: 'my-voyage',
-    //templateUrl: 'voyage.component.html',
-})
-export class VoyageComponent  {
+export enum Localisation{
+    MER,
+    MONTAGNE
+}
+
+export enum Activite{
+    SPORT,
+    DETENTE
+}
+
+export class Voyage  {
+    id: number;
+    name: string;
+    saison: Saison;
+    localisation: Localisation;
+    activite: Activite;
    }
