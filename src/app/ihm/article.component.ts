@@ -17,7 +17,8 @@ import { BOUCHONVOYAGES } from './mock-voyage';
 
 export class ArticleComponent implements OnInit {
     
-    description: string;
+    //pour recuperer le mock
+    voyage: Voyage;
 
     constructor(
         private route: ActivatedRoute,
@@ -43,7 +44,7 @@ export class ArticleComponent implements OnInit {
             });
             // 3: find
             r = BOUCHONVOYAGES.find(v => v.id == n);
-            this.description = r.description;
+            this.voyage = r;
         });
     }
 }
