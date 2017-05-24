@@ -5,6 +5,7 @@ export class Voyage  {
     saison: string;
     localisation: string;
     activite: string;
+    description:string;
 
 
 }

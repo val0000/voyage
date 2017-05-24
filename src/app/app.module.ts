@@ -16,7 +16,7 @@ import { ArticleComponent } from './ihm/article.component';
                 {path: '', redirectTo: '/dashboard', pathMatch: 'full'},
                 {path: 'travel', component: TravelComponent},
                 {path: 'contact', component: ContactComponent},
-                {path: 'article', component: ArticleComponent}
+                {path: 'article/:id', component: ArticleComponent}
                 ])],
                 
           declarations: [ AppComponent, DashboardComponent, TravelComponent, ContactComponent, ArticleComponent ],

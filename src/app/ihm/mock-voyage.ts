@@ -1,23 +1,23 @@
 import {Voyage} from './voyage';
 
 export const BOUCHONVOYAGES: Voyage[] = [
-         {id:1, photo:'../image/maldives.jpg', name: 'Maldives', saison: 'Hiver', localisation: 'Mer', activite: 'Détente' },
-         {id:2,photo:'../image/suisse.jpg',name: 'Suisse', saison: 'Hiver', localisation: 'Montagne', activite: 'Sport' },
-         {id:3,photo:'../image/australie.jpg',name: 'Australie', saison: 'Hiver', localisation: 'Mer', activite: 'Sport' },
-         {id:4,photo:'../image/venezuela.jpg',name: 'Venezuela', saison: 'Hiver', localisation: 'Montagne', activite: 'Détente' },
+         {id:1, photo:'../image/maldives.jpg', name: 'Maldives', saison: 'Hiver', localisation: 'Mer', activite: 'Détente', description:'C’est la destination favorite des amoureux. Magnifique archipel à quelques kilomètres du sud de l’Inde, les Maldives offrent sans doute un des cadres les plus paradisiaques au monde. Entouré par 1200 atolls et îlots, le pays compte un grand nombre de petits coins de paradis, où l’on se sent facilement seul au monde. Seul, ou avec sa moitié. Bien que l’archipel soit probablement la destination idéale pour les amoureux, il n’en demeure pas moins qu’un séjour sur l’île ravira aussi les familles, les sportifs amateurs de plongée et de surf, ou encore les globe-trotters. Imaginez un paysage de sable blanc à perte de vue, une mer cristalline entrecoupée d’éclats d’îles ou d’atolls, des jardins dont les plantes jaunes, roses et bleues rehaussent encore plus le vert éclatant de l’herbe parfaite. Imaginez-vous, posé sur cette plage, entouré des parfums d’hibiscus ou de frangipaniers que la brise chaude amène à vos narines. Un voyage aux Maldives, c’est l’assurance de découvrir un monde unique, qui ne ressemble à aucun autre. Un monde où le temps s’arrête, un monde où l’on cesse de penser, où l’on se laisse aller…' },
+         {id:2,photo:'../image/suisse.jpg',name: 'Suisse', saison: 'Hiver', localisation: 'Montagne', activite: 'Sport', description:'Luxe, calme et volupté. Baudelaire aurait presque pu être en train d’évoquer la Suisse en écrivant ces lignes. Avec ses paysages immaculés, son exigence quasi instinctive de qualité et son culte de la propreté et de la tranquillité, sans compter une économie et un niveau de vie insolents de santé, la Suisse ressemble en effet à de nombreux égards à un écrin rutilant niché au cœur de l’Europe. Bien sûr, comme tous les autres pays, elle recèle ses inconvénients, au premier rang desquels on placera sans hésitation le coût de la vie. À l’instar des pays scandinaves, prévoir en effet un budget en conséquence pour visiter la Suisse, en particulier pour les transports et l’hébergement. Mais les récompenses sont au rendez-vous au cours d\'un trek vous pourrez découvrir les paysages des montagnes suisses qui sont certainement parmi les plus beaux d’Europe, ses villes sont pleines de charme (mentionnons tout particulièrement Lucerne, Berne ou Bâle), et, comme évoqué ci-dessus, la qualité des services ainsi que le professionnalisme de ceux qui les prodiguent vous garantiront un voyage des plus agréables. ' },
+         {id:3,photo:'../image/australie.jpg',name: 'Australie', saison: 'Hiver', localisation: 'Mer', activite: 'Sport', description:'' },
+         {id:4,photo:'../image/venezuela.jpg',name: 'Venezuela', saison: 'Hiver', localisation: 'Montagne', activite: 'Détente', description:'' },
          
-         {id:5,photo:'../image/seychelles.jpg',name: 'Seychelles', saison: 'Printemps', localisation: 'Mer', activite: 'Détente' },
-         {id:6,photo:'../image/kirgh.jpg',name: 'Kirghizistan ', saison: 'Printemps', localisation: 'Montagne', activite: 'Sport' },
-         {id:7,photo:'../image/mada.jpg',name: 'Madagascar', saison: 'Printemps', localisation: 'Mer', activite: 'Sport' },
-         {id:8,photo:'../image/reunion.jpg',name: 'La Réunion', saison: 'Printemps', localisation: 'Montagne', activite: 'Détente' },
+         {id:5,photo:'../image/seychelles.jpg',name: 'Seychelles', saison: 'Printemps', localisation: 'Mer', activite: 'Détente', description:'' },
+         {id:6,photo:'../image/kirgh.jpg',name: 'Kirghizistan ', saison: 'Printemps', localisation: 'Montagne', activite: 'Sport', description:'' },
+         {id:7,photo:'../image/mada.jpg',name: 'Madagascar', saison: 'Printemps', localisation: 'Mer', activite: 'Sport', description:'' },
+         {id:8,photo:'../image/reunion.jpg',name: 'La Réunion', saison: 'Printemps', localisation: 'Montagne', activite: 'Détente', description:'' },
          
-         {id:9,photo:'../image/zanzibar.jpg',name: 'Zanzibar', saison: 'Eté', localisation: 'Mer', activite: 'Détente' },
-         {id:10,photo:'../image/georgie.jpg',name: 'Géorgie ', saison: 'Eté', localisation: 'Montagne', activite: 'Sport' },
-         {id:11,photo:'../image/canada.jpg',name: 'Canada', saison: 'Eté', localisation: 'Mer', activite: 'Sport' },
-         {id:12,photo:'../image/acores.jpg',name: 'Les Açores', saison: 'Eté', localisation: 'Montagne', activite: 'Détente' },
+         {id:9,photo:'../image/zanzibar.jpg',name: 'Zanzibar', saison: 'Eté', localisation: 'Mer', activite: 'Détente', description:'' },
+         {id:10,photo:'../image/georgie.jpg',name: 'Géorgie ', saison: 'Eté', localisation: 'Montagne', activite: 'Sport', description:'' },
+         {id:11,photo:'../image/canada.jpg',name: 'Canada', saison: 'Eté', localisation: 'Mer', activite: 'Sport', description:'' },
+         {id:12,photo:'../image/acores.jpg',name: 'Les Açores', saison: 'Eté', localisation: 'Montagne', activite: 'Détente', description:'' },
          
-         {id:13,photo:'../image/polynesie.jpg',name: 'Polynésie Française', saison: 'Automne', localisation: 'Mer', activite: 'Détente' },
-         {id:14,photo:'../image/tibet.jpg',name: 'Tibet ', saison: 'Automne', localisation: 'Montagne', activite: 'Sport' },
-         {id:15,photo:'../image/benin.jpg',name: 'Bénin', saison: 'Automne', localisation: 'Mer', activite: 'Sport' },
-         {id:16,photo:'../image/hawaï.jpg',name: 'Hawaï', saison: 'Automne', localisation: 'Montagne', activite: 'Détente' }
+         {id:13,photo:'../image/polynesie.jpg',name: 'Polynésie Française', saison: 'Automne', localisation: 'Mer', activite: 'Détente', description:'' },
+         {id:14,photo:'../image/tibet.jpg',name: 'Tibet ', saison: 'Automne', localisation: 'Montagne', activite: 'Sport', description:'' },
+         {id:15,photo:'../image/benin.jpg',name: 'Bénin', saison: 'Automne', localisation: 'Mer', activite: 'Sport', description:'' },
+         {id:16,photo:'../image/hawaï.jpg',name: 'Hawaï', saison: 'Automne', localisation: 'Montagne', activite: 'Détente', description:'' }
 ]

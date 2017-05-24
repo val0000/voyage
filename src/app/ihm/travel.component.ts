@@ -11,10 +11,12 @@ import { BOUCHONVOYAGES } from './mock-voyage';
 
 export class TravelComponent implements OnInit {
 
-    // flitre choisi par l'utilisateur
+    // filtre choisi par l'utilisateur
     saison: string;
     activite: string;  
     localisation: string;
+    description: string;
+
 
     // tous les voyages
     voyages: Voyage[] = BOUCHONVOYAGES;
@@ -23,6 +25,7 @@ export class TravelComponent implements OnInit {
     voyagesFiltres: Voyage[];
 
     ngOnInit() {
+        console.log('init');
         this.filtre();
     }
 
@@ -42,6 +45,7 @@ export class TravelComponent implements OnInit {
     }
     
     filtre(): void {
+        console.log('filtre: ' + this.saison + ', ' + this.localisation);
         this.voyagesFiltres = this.voyages.filter(v => {
             if(v.saison == this.saison
                && v.localisation == this.localisation && v.activite == this.activite     ) {
@@ -51,5 +55,8 @@ export class TravelComponent implements OnInit {
             }
         });
     }
-
+    getArticle(id: number): Promise<> {
+        return this.getArticle()
+                   .then(heroes => heroes.find(hero => hero.id === id));
+      }  
 }

@@ -52,12 +52,13 @@
                         		<li>{{voyage.saison}}</li>
                         		<li>{{voyage.localisation}}</li>
                         		<li>{{voyage.activite}}</li>
+                        		<li>{{voyage.description}}</li>
                         		
                         		</ul>
                            </div>
                     </div>
                     <div class="card-footer">
-						 <a class="nav-link btn btn-secondary float-right btn-sm" routerLink="/article">Voir l'article</a>
+						 <a class="nav-link btn btn-secondary float-right btn-sm" [routerLink]="['/article', voyage.id]">Voir l'article</a>
                     </div>
                 </div>
             </div>
