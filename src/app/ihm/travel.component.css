@@ -93,7 +93,7 @@
     -moz-transition: -moz-transform 0.4s, opacity 0.2s;
     transition: transform 0.4s, opacity 0.2s;
 }
-.hoverbtn.effect-2.sub-b:hover, .hoverbtn.effect-2.sub-b:hover i {
+.hoverbtn.effect-2.sub-b:hover, .hoverbtn.effect-2.sub-b:hover i, .hoverbtn.effect-2.sub-b:active  {
     color: #eea303;
     background-color: #fff;
 }
@@ -145,6 +145,7 @@
     font-size: 1.28571429em;
     font-weight: 700;
     line-height: 1.2857em;
+    text-align: center;
 }
 
 .card-text {
@@ -171,8 +172,8 @@
     display: inline-block;
     overflow: hidden;
     box-sizing: border-box;
-    width: 25px;
-    height: 25px;
+    width: 125px;
+    height: 125px;
     margin: 0;
     border: 1px solid #fff;
     border-radius: 50%;
@@ -184,6 +185,9 @@
     height: auto;
 }
 
+.col-lg-6 {
+	margin-top : 15px;
+}
 
 
 

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Voyage, Saison,Localisation, Activite } from './voyage';
+import { Voyage } from './voyage';
 import { BOUCHONVOYAGES } from './mock-voyage';
 
 @Component({
@@ -9,12 +9,12 @@ import { BOUCHONVOYAGES } from './mock-voyage';
   styleUrls: ['travel.component.css'],
 })
 
-export class TravelComponent {
+export class TravelComponent implements OnInit {
 
     // flitre choisi par l'utilisateur
-    saison: Saison;
-    activite: Activite;  
-    localisation: Localisation;
+    saison: string;
+    activite: string;  
+    localisation: string;
 
     // tous les voyages
     voyages: Voyage[] = BOUCHONVOYAGES;
@@ -22,20 +22,34 @@ export class TravelComponent {
     // les voyages filtrés
     voyagesFiltres: Voyage[];
 
-    clickSaison(saison: Saison) {
+    ngOnInit() {
+        this.filtre();
+    }
+
+    clickSaison(saison: string) {
         this.saison = saison;
+        this.filtre();
     }
         
-    clickLocalisation(localisation: Localisation) {
+    clickLocalisation(localisation: string) {
         this.localisation = localisation;
+        this.filtre();
     }   
         
-    clickActivite(activite: Activite) {
+    clickActivite(activite: string) {
         this.activite = activite;
+        this.filtre();
     }
     
-    filtre(): string {
-        return `saison: ${Saison[this.saison]} activite: ${this.activite} localisation: ${this.localisation}`;
+    filtre(): void {
+        this.voyagesFiltres = this.voyages.filter(v => {
+            if(v.saison == this.saison
+               && v.localisation == this.localisation && v.activite == this.activite     ) {
+              return true;
+            } else {
+                return false;
+            }
+        });
     }
 
 }

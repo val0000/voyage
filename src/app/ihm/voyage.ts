@@ -1,24 +1,10 @@
-export enum Saison{
-    PRINTEMPS,
-    ETE,
-    AUTOMNE,
-    HIVER
-}
-
-export enum Localisation{
-    MER,
-    MONTAGNE
-}
-
-export enum Activite{
-    SPORT,
-    DETENTE
-}
-
 export class Voyage  {
     id: number;
+    photo:string;
     name: string;
-    saison: Saison;
-    localisation: Localisation;
-    activite: Activite;
-   }
+    saison: string;
+    localisation: string;
+    activite: string;
+
+
+}

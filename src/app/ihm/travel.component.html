@@ -5,10 +5,10 @@
 		<div id="travel-haut row">
 			<div class="col-lg-12 seasons">
 				<div id="seasons" class="travel block">					
-					<i class="hoverbtn effect-2 sub-b" (click)="clickSaison(0)">Printemps</i>
-					<i class="hoverbtn effect-2 sub-b" (click)="clickSaison(1)">Eté</i>
-					<i class="hoverbtn effect-2 sub-b" (click)="clickSaison(2)">Automne</i>
-					<i class="hoverbtn effect-2 sub-b" (click)="clickSaison(3)">Hiver</i>
+					<i class="hoverbtn effect-2 sub-b" (click)="clickSaison('Printemps')">Printemps</i>
+					<i class="hoverbtn effect-2 sub-b" (click)="clickSaison('Eté')">Eté</i>
+					<i class="hoverbtn effect-2 sub-b" (click)="clickSaison('Automne')">Automne</i>
+					<i class="hoverbtn effect-2 sub-b" (click)="clickSaison('Hiver')">Hiver</i>
 				</div>
 			</div>
 			
@@ -16,20 +16,19 @@
 				<div class="col-md-6 row">
 					<div id="location" class="travel">
 						<!-- mer/montagne --> 
-						<i class="hoverbtn effect-2 sub-b" (click)="clickLocalisation(0)">Mer</i>
-						<i class="hoverbtn effect-2 sub-b" (click)="clickLocalisation(1)">Montagne</i>
+						<i class="hoverbtn effect-2 sub-b" (click)="clickLocalisation('Mer')">Mer</i>
+						<i class="hoverbtn effect-2 sub-b" (click)="clickLocalisation('Montagne')">Montagne</i>
 					</div>
 				</div>
 				
 				<div class="col-md-6 row">
 					<div id="activity" class="travel">
 						<!-- sport/détente --> 
-						<i class="hoverbtn effect-2 sub-b" (click)="clickActivite(0)">Sport</i>
-						<i class="hoverbtn effect-2 sub-b" (click)="clickActivite(1)">Détente</i>
+						<i class="hoverbtn effect-2 sub-b" (click)="clickActivite('Sport')">Sport</i>
+						<i class="hoverbtn effect-2 sub-b" (click)="clickActivite('Détente')">Détente</i>
 					</div>
 				</div>
 			</div>
-			{{filtre()}}	
 		</div><!-- fin de travel-haut -->
 		</div><!-- fin div image background -->
 		
@@ -37,27 +36,32 @@
 		
 		
 		<div id="travel-bas" class="hidden">
-			<div id="result"> <!-- div qui affichera le résultat, cachée de base -->
-				<ul>
-					<li class="result1">
-					<!-- résultat 1 -->
-						<div class="col-sm-6 col-md-4 col-lg-3 mt-4">
-							<img class="card-img-top" src="http://success-at-work.com/wp-content/uploads/2015/04/free-stock-photos.gif">
-							
-			                <div class="card">
-			                    <div class="card-block">
-			                        <h4 class="card-title mt-3">Votre destination</h4>          
-			                        <div class="card-text">
-			                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in elit sed tortor vulputate volutpat. Sed vel accumsan odio. Fusce faucibus enim nec est lacinia interdum eu in leo. Maecenas sit amet rutrum nulla. Nam quam eros, sodales sit amet pellentesque id, imperdiet vitae ipsum. Nunc non pharetra massa, ut aliquet erat.
-			                        </div>
-			                    </div>
-			                    <div class="card-footer">
-									 <a class="nav-link btn btn-secondary float-right btn-sm" routerLink="/article">Voir l'article</a>
-			                    </div>
-			                </div>
-	            	</div>
-	            	</li>
-				</ul>
+			<div class="container" id="result"> <!-- div qui affichera le résultat, cachée de base -->
+				<div class="result1" *ngFor="let voyage of voyagesFiltres">
+				<!-- résultat 1 -->
+				<div class="col-lg-6 ">
+				<img class="card-img-top" src="{{voyage.photo}}">
+				
+                <div class="card">
+                    <div class="card-block">
+                        <h4 class="card-title mt-3">Voici, votre destination idéale : {{voyage.name}}</h4>
+                                  
+                        <div class="card-text">
+                        	Selon vos critères : 
+                        	<ul>
+                        		<li>{{voyage.saison}}</li>
+                        		<li>{{voyage.localisation}}</li>
+                        		<li>{{voyage.activite}}</li>
+                        		
+                        		</ul>
+                           </div>
+                    </div>
+                    <div class="card-footer">
+						 <a class="nav-link btn btn-secondary float-right btn-sm" routerLink="/article">Voir l'article</a>
+                    </div>
+                </div>
+            </div>
+				</div>
 			
 			</div> <!-- fin de result -->
 		</div> <!-- fin de travel-bas -->
