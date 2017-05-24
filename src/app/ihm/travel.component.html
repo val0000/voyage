@@ -5,10 +5,10 @@
 		<div id="travel-haut row">
 			<div class="col-lg-12 seasons">
 				<div id="seasons" class="travel block">					
-					<i class="hoverbtn effect-2 sub-b">Printemps</i>
-					<i class="hoverbtn effect-2 sub-b" >Eté</i>
-					<i class="hoverbtn effect-2 sub-b">Automne</i>
-					<i class="hoverbtn effect-2 sub-b">Hiver</i>
+					<i class="hoverbtn effect-2 sub-b" (click)="clickSaison(0)">Printemps</i>
+					<i class="hoverbtn effect-2 sub-b" (click)="clickSaison(1)">Eté</i>
+					<i class="hoverbtn effect-2 sub-b" (click)="clickSaison(2)">Automne</i>
+					<i class="hoverbtn effect-2 sub-b" (click)="clickSaison(3)">Hiver</i>
 				</div>
 			</div>
 			
@@ -16,19 +16,20 @@
 				<div class="col-md-6 row">
 					<div id="location" class="travel">
 						<!-- mer/montagne --> 
-						<i class="hoverbtn effect-2 sub-b">Mer</i>
-						<i class="hoverbtn effect-2 sub-b">Montagne</i>
+						<i class="hoverbtn effect-2 sub-b" (click)="clickLocalisation(0)">Mer</i>
+						<i class="hoverbtn effect-2 sub-b" (click)="clickLocalisation(1)">Montagne</i>
 					</div>
 				</div>
 				
 				<div class="col-md-6 row">
 					<div id="activity" class="travel">
 						<!-- sport/détente --> 
-						<i class="hoverbtn effect-2 sub-b">Sport</i>
-						<i class="hoverbtn effect-2 sub-b">Détente</i>
+						<i class="hoverbtn effect-2 sub-b" (click)="clickActivite(0)">Sport</i>
+						<i class="hoverbtn effect-2 sub-b" (click)="clickActivite(1)">Détente</i>
 					</div>
 				</div>
-			</div>	
+			</div>
+			{{filtre()}}	
 		</div><!-- fin de travel-haut -->
 		</div><!-- fin div image background -->
 		
