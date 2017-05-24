@@ -55,8 +55,4 @@ export class TravelComponent implements OnInit {
             }
         });
     }
-    getArticle(id: number): Promise<> {
-        return this.getArticle()
-                   .then(heroes => heroes.find(hero => hero.id === id));
-      }  
 }

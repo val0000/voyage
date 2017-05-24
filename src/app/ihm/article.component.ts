@@ -26,25 +26,26 @@ export class ArticleComponent implements OnInit {
       ) {}   
 
     ngOnInit(): void {
-        this.route.params
-        .switchMap((params: Params) => params['id']).subscribe(n => {
-            console.log('article ' + n);
-            let r: Voyage;
-            // 1: boucle
-            for(let i=0; i < BOUCHONVOYAGES.length; i++) {
-                if(BOUCHONVOYAGES[i].id == n) {
-                    r = BOUCHONVOYAGES[i];
-                }
-            }
-            // 2: map
-            BOUCHONVOYAGES.map(v => {
-                if(v.id == n) {
-                    r = v;
-                }
-            });
-            // 3: find
-            r = BOUCHONVOYAGES.find(v => v.id == n);
-            this.voyage = r;
-        });
+        this.route.params.forEach(p => {if(p['id']) { this.voyage = BOUCHONVOYAGES.find(v => v.id == +p['id'])}});
+//        this.route.params
+//        .switchMap((params: Params) => params['id']).subscribe(n => {
+//            console.log('article ' + typeof n);
+//            let r: Voyage;
+////            // 1: boucle
+////            for(let i=0; i < BOUCHONVOYAGES.length; i++) {
+////                if(BOUCHONVOYAGES[i].id == n) {
+////                    r = BOUCHONVOYAGES[i];
+////                }
+////            }
+////            // 2: map
+////            BOUCHONVOYAGES.map(v => {
+////                if(v.id == n) {
+////                    r = v;
+////                }
+////            });
+//            // 3: find
+//            r = BOUCHONVOYAGES.find(v => v.id === +n);
+//            this.voyage = r;
+//        });
     }
 }
